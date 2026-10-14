@@ -1,0 +1,110 @@
+# Atividade 5 - Sistema Distribuído de Classificação Inteligente de Mensagens com RabbitMQ.
+# Sobe os 4 containers na mesma rede bridge "msg-network":
+#   docker compose up --build
+# Todas as variáveis têm valor padrão; copie .env.example para .env para customizar.
+name: classificador-mensagens
+
+x-rabbit-client-env: &rabbit-client-env
+  RABBITMQ_HOST: rabbitmq
+  RABBITMQ_PORT: 5672
+  RABBITMQ_USER: ${RABBITMQ_USER:-admin}
+  RABBITMQ_PASS: ${RABBITMQ_PASS:-admin123}
+  RABBITMQ_VHOST: /
+  TZ: ${TZ:-America/Sao_Paulo}
+  LOG_LEVEL: ${LOG_LEVEL:-INFO}
+
+services:
+  # ---------------------------------------------------------------- Container 2
+  rabbitmq:
+    image: rabbitmq:3-management
+    hostname: rabbitmq
+    # render-definitions.sh monta o definitions.json (usuário do .env + topologia do template)
+    # e chama o entrypoint oficial. O "tr -d '\r'" protege contra checkout com CRLF no Windows.
+    entrypoint:
+      - /bin/sh
+      - -c
+      - tr -d '\r' < /opt/topologia/render-definitions.sh > /tmp/render-definitions.sh && exec /bin/sh /tmp/render-definitions.sh "$$@"
+      - render-definitions
+    command: ["rabbitmq-server"]
+    environment:
+      RABBITMQ_USER: ${RABBITMQ_USER:-admin}
+      RABBITMQ_PASS: ${RABBITMQ_PASS:-admin123}
+      TZ: ${TZ:-America/Sao_Paulo}
+    ports:
+      - "${RABBITMQ_AMQP_PORT:-5672}:5672"
+      - "${RABBITMQ_MANAGEMENT_PORT:-15672}:15672"
+    volumes:
+      # Fonte única de verdade da topologia (exchange, filas, DLX, DLQs e bindings).
+      - ./rabbitmq:/opt/topologia:ro
+      - ./rabbitmq/rabbitmq.conf:/etc/rabbitmq/conf.d/20-topologia.conf:ro
+      - rabbitmq-data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 10s
+      retries: 12
+      start_period: 20s
+    restart: unless-stopped
+    networks:
+      - msg-network
+
+  # ---------------------------------------------------------------- Container 1
+  generator:
+    build:
+      context: .
+      dockerfile: generator/Dockerfile
+    image: classificador-mensagens/generator:1.0.0
+    environment:
+      <<: *rabbit-client-env
+      MESSAGES_PER_SECOND: ${MESSAGES_PER_SECOND:-10}
+      REVIEW_RATIO: ${REVIEW_RATIO:-0.5}
+      POISON_EVERY_N: ${POISON_EVERY_N:-0}
+      LOG_EACH_MESSAGE: ${LOG_EACH_MESSAGE:-true}
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - msg-network
+
+  # ---------------------------------------------------------------- Container 3
+  consumer-sentiment:
+    build:
+      context: .
+      dockerfile: consumer-sentiment/Dockerfile
+    image: classificador-mensagens/consumer-sentiment:1.0.0
+    environment:
+      <<: *rabbit-client-env
+      PROCESSING_DELAY_MS: ${PROCESSING_DELAY_MS:-1000}
+      PREFETCH_COUNT: ${PREFETCH_COUNT:-1}
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - msg-network
+
+  # ---------------------------------------------------------------- Container 4
+  consumer-support:
+    build:
+      context: .
+      dockerfile: consumer-support/Dockerfile
+    image: classificador-mensagens/consumer-support:1.0.0
+    environment:
+      <<: *rabbit-client-env
+      PROCESSING_DELAY_MS: ${PROCESSING_DELAY_MS:-1000}
+      PREFETCH_COUNT: ${PREFETCH_COUNT:-1}
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - msg-network
+
+networks:
+  msg-network:
+    name: msg-network
+    driver: bridge
+
+volumes:
+  rabbitmq-data:
