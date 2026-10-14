@@ -1,0 +1,98 @@
+{
+  "rabbitmq_version": "3.13",
+  "vhosts": [
+    { "name": "/" }
+  ],
+  "exchanges": [
+    {
+      "name": "messages.exchange",
+      "vhost": "/",
+      "type": "topic",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    },
+    {
+      "name": "dlx.exchange",
+      "vhost": "/",
+      "type": "direct",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    }
+  ],
+  "queues": [
+    {
+      "name": "review.queue",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-queue-type": "classic",
+        "x-dead-letter-exchange": "dlx.exchange",
+        "x-dead-letter-routing-key": "review.dlq"
+      }
+    },
+    {
+      "name": "support.queue",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {
+        "x-queue-type": "classic",
+        "x-dead-letter-exchange": "dlx.exchange",
+        "x-dead-letter-routing-key": "support.dlq"
+      }
+    },
+    {
+      "name": "review.dlq",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": { "x-queue-type": "classic" }
+    },
+    {
+      "name": "support.dlq",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": { "x-queue-type": "classic" }
+    }
+  ],
+  "bindings": [
+    {
+      "source": "messages.exchange",
+      "vhost": "/",
+      "destination": "review.queue",
+      "destination_type": "queue",
+      "routing_key": "review.product",
+      "arguments": {}
+    },
+    {
+      "source": "messages.exchange",
+      "vhost": "/",
+      "destination": "support.queue",
+      "destination_type": "queue",
+      "routing_key": "support.request",
+      "arguments": {}
+    },
+    {
+      "source": "dlx.exchange",
+      "vhost": "/",
+      "destination": "review.dlq",
+      "destination_type": "queue",
+      "routing_key": "review.dlq",
+      "arguments": {}
+    },
+    {
+      "source": "dlx.exchange",
+      "vhost": "/",
+      "destination": "support.dlq",
+      "destination_type": "queue",
+      "routing_key": "support.dlq",
+      "arguments": {}
+    }
+  ]
+}
