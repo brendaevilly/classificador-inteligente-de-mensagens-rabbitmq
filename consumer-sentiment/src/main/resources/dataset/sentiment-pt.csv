@@ -1,0 +1,255 @@
+label;text
+# Dataset rotulado de avaliações de produtos em português (IA 1 - análise de sentimento).
+# Formato: ROTULO;texto. Rótulos: POSITIVA, NEGATIVA, NEUTRA.
+# Frases escritas à mão, com vocabulário próximo ao de avaliações reais e ao do gerador,
+# mas sem copiar os templates, para que o modelo precise generalizar.
+POSITIVA;Produto excelente, chegou bem rápido e funciona muito bem.
+POSITIVA;Adorei a compra, a qualidade é ótima e o preço justo.
+POSITIVA;Superou minhas expectativas, recomendo demais!
+POSITIVA;Maravilhoso, uso todo dia e não tenho nenhuma reclamação.
+POSITIVA;O som é incrível, graves fortes e agudos limpos. Recomendo.
+POSITIVA;Muito bom, entrega antes do prazo e embalagem caprichada.
+POSITIVA;Perfeito para o que eu precisava, estou muito satisfeito.
+POSITIVA;Simplesmente fantástico, melhor investimento do ano.
+POSITIVA;Qualidade impecável, acabamento de primeira linha.
+POSITIVA;Comprei para minha mãe e ela amou, nota dez!
+POSITIVA;Bateria dura o dia inteiro, estou impressionado positivamente.
+POSITIVA;Excelente custo benefício, vale muito a pena.
+POSITIVA;Funciona perfeitamente, fácil de instalar e de usar.
+POSITIVA;Sensacional! Já indiquei para vários amigos.
+POSITIVA;Ótima compra, chegou certinho e muito bem embalada.
+POSITIVA;Estou encantada, o produto é lindo e resistente.
+POSITIVA;Melhor marca que já usei, recomendo de olhos fechados.
+POSITIVA;Espetacular, a imagem é nítida e as cores são vivas.
+POSITIVA;Vendedor atencioso e produto de ótima qualidade.
+POSITIVA;Muito confortável, parece que estou pisando em nuvens.
+POSITIVA;Cinco estrelas, faria a compra novamente sem dúvida.
+POSITIVA;Amei, ficou ainda melhor do que nas fotos.
+POSITIVA;Rápido, silencioso e bonito. Estou muito feliz com ele.
+POSITIVA;Valeu cada centavo, produto de excelente qualidade.
+POSITIVA;Funciona maravilhosamente bem, super recomendo.
+POSITIVA;Ótimo desempenho, nunca travou e é muito leve.
+POSITIVA;Gostei muito, material resistente e bem acabado.
+POSITIVA;Produto top, entrega rápida e atendimento excelente.
+POSITIVA;Estou apaixonado, cumpre tudo e ainda surpreende.
+POSITIVA;Comprei de novo porque a primeira unidade foi perfeita.
+POSITIVA;Incrível como algo tão barato pode ser tão bom.
+POSITIVA;A experiência foi ótima do pedido até a entrega.
+POSITIVA;Prático, eficiente e durável. Recomendo a todos.
+POSITIVA;Minha família inteira adorou, foi um sucesso.
+POSITIVA;Fiquei muito satisfeita, o produto é excelente.
+POSITIVA;Nota mil para a qualidade e para o atendimento.
+POSITIVA;Superou tudo o que eu imaginava, que maravilha.
+POSITIVA;Excelente produto, já é o terceiro que compro.
+POSITIVA;Uso há meses e continua perfeito como no primeiro dia.
+POSITIVA;Bonito, moderno e funciona muito bem. Aprovado!
+POSITIVA;Melhor que o modelo anterior, valeu a troca.
+POSITIVA;Simplesmente perfeito, não mudaria nada.
+POSITIVA;Amei a cor e o tamanho, ficou ótimo na minha casa.
+POSITIVA;Muito bom mesmo, recomendo para quem está em dúvida.
+POSITIVA;Entrega super rápida e produto incrível, parabéns à loja.
+POSITIVA;Gostei bastante, a qualidade surpreendeu positivamente.
+POSITIVA;É o melhor produto da categoria, sem comparação.
+POSITIVA;Fantástico, deixou minha rotina muito mais fácil.
+POSITIVA;Comprei com receio, mas me surpreendi muito, é ótimo.
+POSITIVA;Tudo perfeito, desde a embalagem até o funcionamento.
+POSITIVA;Satisfação total, recomendo sem medo.
+POSITIVA;Lindo demais, todos que veem elogiam.
+POSITIVA;Produto maravilhoso, chegou antes do previsto.
+POSITIVA;Funcionou de primeira e o resultado é excelente.
+POSITIVA;Uma delícia de usar, estou adorando.
+POSITIVA;Ótimo para o dia a dia, leve e muito eficiente.
+POSITIVA;Excelente, exatamente como descrito no anúncio.
+POSITIVA;Recomendo muito, a qualidade é de outro nível.
+POSITIVA;Muito superior ao que eu tinha antes, estou feliz.
+POSITIVA;Compra excelente, produto robusto e confiável.
+POSITIVA;Gostei demais, voltaria a comprar com certeza.
+POSITIVA;Perfeita, encaixou certinho e funciona sem problemas.
+POSITIVA;Ótima qualidade de construção, sem nenhum defeito.
+POSITIVA;Show de bola, entregou tudo o que prometeu e mais um pouco.
+POSITIVA;Que produto bom! Melhor compra que fiz.
+POSITIVA;Maravilhosa, estou usando todos os dias com muito prazer.
+POSITIVA;Funciona super bem e o design é encantador.
+POSITIVA;Fiquei impressionado com a qualidade, nota 10.
+POSITIVA;Excelente atendimento e produto de altíssimo nível.
+POSITIVA;Adorei! Chegou bem embalado e em perfeito estado.
+POSITIVA;Muito bom, potente e silencioso. Estou satisfeito.
+POSITIVA;Incrível, a bateria é ótima e carrega rápido.
+POSITIVA;Vale muito a pena, produto sensacional.
+POSITIVA;Gostei muito do acabamento, parece produto importado.
+POSITIVA;Recomendo! Ótimo custo-benefício e entrega no prazo.
+POSITIVA;Superou as expectativas da família toda, amamos.
+POSITIVA;Espetacular, recomendo a compra para todos.
+POSITIVA;Excelente em tudo, estou muito contente com a escolha.
+POSITIVA;Lindo, confortável e de ótima qualidade.
+POSITIVA;Perfeito! Era exatamente o que eu procurava.
+NEGATIVA;Péssimo produto, parou de funcionar na primeira semana.
+NEGATIVA;Horrível, veio quebrado e ninguém responde.
+NEGATIVA;Não recomendo, a qualidade é muito ruim.
+NEGATIVA;Terrível, esquenta muito e desliga sozinho.
+NEGATIVA;Me arrependi profundamente dessa compra.
+NEGATIVA;Dinheiro jogado no lixo, não funciona direito.
+NEGATIVA;Chegou com defeito e a loja se recusa a trocar.
+NEGATIVA;Muito frágil, quebrou na primeira queda.
+NEGATIVA;Decepcionante, nada parecido com as fotos do anúncio.
+NEGATIVA;A entrega atrasou três semanas e o produto veio errado.
+NEGATIVA;Produto de péssima qualidade, o tecido rasgou na primeira lavagem.
+NEGATIVA;Uma porcaria, não vale nem metade do preço.
+NEGATIVA;Barulhento demais e a potência é fraca.
+NEGATIVA;Pior compra que já fiz, quero o reembolso.
+NEGATIVA;Não funciona, já tentei de tudo. Lixo.
+NEGATIVA;Ruim demais, a bateria não dura nem uma hora.
+NEGATIVA;Totalmente diferente do anunciado, enganação.
+NEGATIVA;Mal acabado, cheio de rebarbas e peças soltas.
+NEGATIVA;O suporte não resolve nada, estou muito insatisfeito.
+NEGATIVA;Esquentou e derreteu o plugue, perigoso.
+NEGATIVA;Não comprem, é uma decepção total.
+NEGATIVA;Quebrou em poucos dias de uso, péssimo.
+NEGATIVA;A tinta descascou toda em um mês, horrível.
+NEGATIVA;Veio usado e sujo, um absurdo.
+NEGATIVA;Nunca mais compro dessa marca, terrível experiência.
+NEGATIVA;Trava o tempo todo, impossível de usar.
+NEGATIVA;Muito ruim, não atende ao que promete.
+NEGATIVA;Produto falsificado, qualidade horrorosa.
+NEGATIVA;Devolvi no mesmo dia, uma decepção enorme.
+NEGATIVA;O material é fraquíssimo e o cheiro é insuportável.
+NEGATIVA;Detestei, a pior escolha que eu poderia ter feito.
+NEGATIVA;Parou de ligar depois de duas semanas, lamentável.
+NEGATIVA;Péssima experiência, o produto nunca chegou inteiro.
+NEGATIVA;Não vale o preço, muito mal feito.
+NEGATIVA;Horrível, faz um barulho enorme e vibra demais.
+NEGATIVA;Me senti enganado, o produto é muito inferior.
+NEGATIVA;Ruim, frágil e desconfortável. Não recomendo.
+NEGATIVA;Estragou rapidamente, jogou meu dinheiro fora.
+NEGATIVA;Veio faltando peças e o vendedor sumiu.
+NEGATIVA;Que tristeza, não funcionou nem uma vez.
+NEGATIVA;Terrível, o carregador esquenta e não carrega.
+NEGATIVA;Pior impossível, arrependimento total.
+NEGATIVA;Produto horrível, não aguentou nem um mês.
+NEGATIVA;A tela veio trincada e a troca demorou demais.
+NEGATIVA;Não recomendo a ninguém, péssimo atendimento e produto ruim.
+NEGATIVA;Uma decepção, a costura soltou logo no primeiro uso.
+NEGATIVA;Fraco, lento e mal feito. Arrependido.
+NEGATIVA;Defeituoso, desliga sozinho toda hora.
+NEGATIVA;Que porcaria, enferrujou em poucas semanas.
+NEGATIVA;Insatisfeito, a qualidade caiu muito em relação ao anterior.
+NEGATIVA;Veio com cheiro de queimado, muito perigoso.
+NEGATIVA;Não aguenta peso nenhum, quebrou fácil.
+NEGATIVA;Péssimo, as letras apagaram com uma semana.
+NEGATIVA;Horroroso, nada a ver com o que foi mostrado.
+NEGATIVA;Ruim, a entrega atrasou e a caixa veio amassada.
+NEGATIVA;Inútil, não serve para o que foi anunciado.
+NEGATIVA;Detestei a compra, quero devolver e receber meu dinheiro.
+NEGATIVA;Totalmente decepcionado, não funciona como deveria.
+NEGATIVA;Quebrou logo, material de quinta categoria.
+NEGATIVA;Um lixo, gastei dinheiro à toa.
+NEGATIVA;Terrível qualidade, o botão travou no segundo dia.
+NEGATIVA;Muito ruim, esquenta e trava a cada cinco minutos.
+NEGATIVA;Não gostei, é frágil e parece de brinquedo.
+NEGATIVA;A pior marca do mercado, evitem a todo custo.
+NEGATIVA;Produto ruim e caro, não compensa.
+NEGATIVA;Veio com defeito de fábrica, muito decepcionante.
+NEGATIVA;Lamentável, o vendedor ignorou minhas reclamações.
+NEGATIVA;Péssimo acabamento, arranhado e com peças tortas.
+NEGATIVA;Não durou nada, parou de funcionar rapidinho.
+NEGATIVA;Horrível de usar, machuca e é desconfortável.
+NEGATIVA;Vergonhoso, o produto chegou aberto e danificado.
+NEGATIVA;Ruim demais, a imagem é escura e embaçada.
+NEGATIVA;Que arrependimento, não serve para nada.
+NEGATIVA;Muito mal feito, desmontou sozinho.
+NEGATIVA;Fiquei indignado com a qualidade, péssimo.
+NEGATIVA;Não comprem, deu problema logo na primeira semana.
+NEGATIVA;Esquenta absurdamente, um perigo.
+NEGATIVA;Uma estrela porque não dá para dar zero.
+NEGATIVA;Terrível, o atendimento foi grosseiro e não trocaram.
+NEGATIVA;Produto horrível e entrega atrasada, decepção.
+NEGATIVA;Quebrado, sujo e incompleto. Um desrespeito.
+NEGATIVA;Frágil, barato demais na qualidade e caro no preço.
+NEGATIVA;Péssima compra, me arrependo todos os dias.
+NEGATIVA;Ruim, não liga mais e a garantia não cobre.
+NEGATIVA;Nota zero, nada funciona como prometido.
+NEGATIVA;Fuja desse produto, é uma cilada.
+NEGATIVA;Que desastre, estragou na primeira utilização.
+NEGATIVA;Insuportável, faz muito barulho e treme.
+NEGATIVA;Muito decepcionado, devolvi e ainda espero o estorno.
+NEUTRA;Produto razoável, cumpre o básico.
+NEUTRA;É ok, nada de mais.
+NEUTRA;Funciona, mas não é nada excepcional.
+NEUTRA;Mediano, esperava um pouco mais pelo preço.
+NEUTRA;Normal, igual a tantos outros do mercado.
+NEUTRA;Atende ao que eu precisava, sem grandes surpresas.
+NEUTRA;Nem ótimo nem péssimo, apenas razoável.
+NEUTRA;Chegou no prazo, ainda estou testando.
+NEUTRA;Simples, faz o que promete e só.
+NEUTRA;Aceitável para o valor pago.
+NEUTRA;Tem prós e contras, depende do uso.
+NEUTRA;Regular, algumas coisas boas e outras nem tanto.
+NEUTRA;Produto comum, sem diferenciais.
+NEUTRA;Cumpre a função, mas o acabamento é simples.
+NEUTRA;Dentro do esperado para essa faixa de preço.
+NEUTRA;Ainda não sei dizer se gostei, uso há poucos dias.
+NEUTRA;É um produto padrão, nada que chame atenção.
+NEUTRA;Funciona normalmente, sem elogios nem críticas.
+NEUTRA;Serve para o dia a dia, mas é bem básico.
+NEUTRA;Nada a reclamar e nada a elogiar.
+NEUTRA;Razoável, poderia ter mais funções.
+NEUTRA;Ok para quem não exige muito.
+NEUTRA;Recebi conforme descrito, é um produto normal.
+NEUTRA;Médio, não é ruim, mas também não é bom.
+NEUTRA;Faz o trabalho, nada além disso.
+NEUTRA;Satisfaz o mínimo necessário.
+NEUTRA;Parecido com o que eu tinha antes, sem mudanças.
+NEUTRA;Bom em alguns aspectos, fraco em outros.
+NEUTRA;Ainda estou me acostumando com ele, por enquanto ok.
+NEUTRA;Produto mediano, preço condizente.
+NEUTRA;Nem bom nem ruim, apenas cumpre.
+NEUTRA;Atende, mas há opções melhores por aí.
+NEUTRA;É o que é, um produto simples e funcional.
+NEUTRA;Entrega dentro do prazo, produto conforme o anúncio.
+NEUTRA;Uso pouco, então não tenho uma opinião forte.
+NEUTRA;Ele funciona, mas o design é comum.
+NEUTRA;Três estrelas, cumpre o prometido sem impressionar.
+NEUTRA;Regular, não me arrependo, mas não compraria de novo.
+NEUTRA;Aceitável, embora a embalagem fosse simples.
+NEUTRA;Uma opção comum para quem precisa do básico.
+NEUTRA;Não impressiona, mas também não decepciona.
+NEUTRA;Funcionamento normal, sem destaque.
+NEUTRA;Pelo valor, está dentro do razoável.
+NEUTRA;Tem o essencial, nada de especial.
+NEUTRA;Produto ok, chegou conforme combinado.
+NEUTRA;Mediano em tudo, nem melhor nem pior que a concorrência.
+NEUTRA;Para uso ocasional é suficiente.
+NEUTRA;Ainda é cedo para avaliar, parece normal.
+NEUTRA;Cumpre o papel, sem luxo.
+NEUTRA;Não tenho muito a dizer, é um produto comum.
+NEUTRA;Algumas funções agradam, outras deixam a desejar.
+NEUTRA;Entrega normal e produto dentro do padrão.
+NEUTRA;Mais ou menos, esperava um pouco mais.
+NEUTRA;Razoavelmente bom para o preço cobrado.
+NEUTRA;Funciona como qualquer outro do tipo.
+NEUTRA;É simples e atende, mas nada demais.
+NEUTRA;Sem surpresas, exatamente o básico do básico.
+NEUTRA;O produto é ok, poderia ser um pouco melhor.
+NEUTRA;Normal, sem pontos negativos ou positivos marcantes.
+NEUTRA;Uso diário sem problemas, mas também sem encantos.
+NEUTRA;Avaliação neutra, é um item comum.
+NEUTRA;Cumpre o que diz, sem ir além.
+NEUTRA;Aceitável, mas não recomendaria com entusiasmo.
+NEUTRA;Produto padrão, nada fora do comum.
+NEUTRA;Atende parcialmente, tem limitações.
+NEUTRA;É regular, nota três de cinco.
+NEUTRA;O preço é justo para o que oferece, nada além.
+NEUTRA;Medíocre, mas funciona.
+NEUTRA;Similar a outros modelos que já tive.
+NEUTRA;Por enquanto está funcionando dentro do esperado.
+NEUTRA;Nem tão bom quanto dizem, nem tão ruim.
+NEUTRA;É apenas um produto normal, sem novidades.
+NEUTRA;Atende ao propósito, sem grandes qualidades.
+NEUTRA;Faz o necessário, nem mais nem menos.
+NEUTRA;Ok, serve, mas não me encantou.
+NEUTRA;Produto mediano, nada a declarar.
+NEUTRA;Chegou certo, funciona normal, é isso.
+NEUTRA;Experiência neutra, sem problemas e sem destaque.
+NEUTRA;Bem comum, igual aos que vejo em qualquer loja.
+NEUTRA;Satisfatório, mas pode melhorar em alguns detalhes.
+NEUTRA;Um produto simples, sem muitas qualidades ou defeitos.
