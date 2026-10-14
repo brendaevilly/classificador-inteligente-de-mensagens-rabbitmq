@@ -1,0 +1,17 @@
+# Contexto de build = raiz do repositório. Envia ao Docker apenas o necessário (poms e src).
+**/target/
+.git/
+.gitignore
+.gitattributes
+.idea/
+.vscode/
+.cursor/
+*.iml
+.env
+.env.example
+docs/
+scripts/
+rabbitmq/
+*.md
+LICENSE
+docker-compose.yml

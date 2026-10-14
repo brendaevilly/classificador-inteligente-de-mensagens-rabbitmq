@@ -1,0 +1,23 @@
+# Maven
+target/
+dependency-reduced-pom.xml
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.project
+.classpath
+.settings/
+.cursor/
+
+# Ambiente / segredos
+.env
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
