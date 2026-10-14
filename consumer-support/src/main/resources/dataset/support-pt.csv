@@ -1,0 +1,245 @@
+label;text
+# Dataset rotulado de solicitações de suporte técnico em português (IA 2).
+# Formato: ROTULO;texto. Rótulos: ACESSO, DESEMPENHO, CONEXAO.
+# Frases escritas à mão, com vocabulário próximo ao de chamados reais e ao do gerador,
+# mas sem copiar os templates, para que o modelo precise generalizar.
+ACESSO;Não consigo entrar no sistema, diz que a senha está errada.
+ACESSO;Minha senha expirou e não consigo trocar.
+ACESSO;Esqueci a senha do portal e o e-mail de recuperação não chega.
+ACESSO;Meu usuário foi bloqueado depois de errar a senha três vezes.
+ACESSO;Aparece a mensagem de acesso negado ao abrir a pasta compartilhada.
+ACESSO;O login falha com a mensagem usuário inválido.
+ACESSO;Não recebo o SMS com o código de autenticação.
+ACESSO;Perdi o acesso ao meu e-mail corporativo depois da troca de senha.
+ACESSO;Preciso de permissão para acessar o módulo financeiro.
+ACESSO;Minha conta está desativada e não consigo logar.
+ACESSO;O sistema não aceita minhas credenciais desde ontem.
+ACESSO;Ao tentar logar recebo erro de autenticação.
+ACESSO;O aplicativo pede para eu fazer login toda hora.
+ACESSO;Fui desconectado da sessão e agora minha senha não funciona.
+ACESSO;O código do autenticador de dois fatores é sempre recusado.
+ACESSO;Não tenho permissão para editar os documentos do meu setor.
+ACESSO;Meu perfil perdeu os privilégios de administrador.
+ACESSO;A redefinição de senha não funciona, o link está expirado.
+ACESSO;Preciso desbloquear minha conta com urgência.
+ACESSO;Aparece credenciais inválidas mesmo com a senha correta.
+ACESSO;O novo funcionário ainda não tem usuário criado no sistema.
+ACESSO;Não consigo acessar minha conta, diz que o usuário não existe.
+ACESSO;Minha senha foi alterada sem meu conhecimento e estou sem acesso.
+ACESSO;O token de autenticação venceu e o sistema me expulsa.
+ACESSO;Recebo erro 403 proibido ao abrir a página de relatórios.
+ACESSO;Erro 401 não autorizado ao fazer login no portal.
+ACESSO;Esqueci meu usuário e não sei como recuperar.
+ACESSO;Meu cadastro está pendente de aprovação e não consigo logar.
+ACESSO;O sistema pede uma senha nova toda semana e agora travou meu login.
+ACESSO;A verificação em duas etapas não envia o código para o meu celular.
+ACESSO;Não consigo acessar o painel, aparece sem permissão.
+ACESSO;Minha conta foi suspensa por excesso de tentativas de acesso.
+ACESSO;O login com certificado digital não é reconhecido.
+ACESSO;Perdi a senha do e-mail e preciso redefinir.
+ACESSO;O sistema diz que minha sessão expirou e não deixa entrar de novo.
+ACESSO;Preciso liberar o acesso de um colega ao sistema de RH.
+ACESSO;Ao digitar a senha aparece login ou senha incorretos.
+ACESSO;Minha autenticação falha só no aplicativo do celular.
+ACESSO;O usuário de teste não consegue entrar na plataforma.
+ACESSO;Tenho acesso de leitura mas preciso de permissão de escrita.
+ACESSO;Não chega o e-mail de confirmação de cadastro.
+ACESSO;Bloquearam meu usuário e não sei o motivo.
+ACESSO;A senha temporária enviada pelo suporte não funciona.
+ACESSO;Não consigo fazer logon na máquina com meu usuário de rede.
+ACESSO;O sistema recusa meu login e diz conta inexistente.
+ACESSO;Preciso recuperar o acesso à minha conta de administrador.
+ACESSO;O captcha falha sempre e não consigo concluir o login.
+ACESSO;Mudei de setor e perdi acesso aos sistemas antigos.
+ACESSO;Minha senha não é reconhecida depois da atualização.
+ACESSO;O portal exige autenticação novamente a cada página.
+ACESSO;Esqueci a resposta da pergunta de segurança e estou bloqueado.
+ACESSO;Não consigo entrar no aplicativo, diz que a conta está bloqueada.
+ACESSO;Preciso de acesso à área restrita do site.
+ACESSO;O login único SSO não reconhece meu usuário.
+ACESSO;O sistema pede uma permissão que eu não tenho para abrir o relatório.
+ACESSO;Minha chave de acesso foi revogada por engano.
+ACESSO;Não aceita meu CPF como usuário no login.
+ACESSO;Errei a senha e agora o acesso está bloqueado por 24 horas.
+ACESSO;Não consigo autenticar no e-mail pelo celular.
+ACESSO;O perfil de usuário foi excluído e não consigo logar.
+ACESSO;Preciso redefinir a senha de acesso ao ERP.
+ACESSO;Ao tentar entrar aparece usuário sem permissão de acesso.
+ACESSO;O código de verificação chega expirado.
+ACESSO;Não lembro minha senha e o botão esqueci a senha não funciona.
+ACESSO;Minha conta foi desabilitada após as férias.
+ACESSO;Recebo acesso negado ao tentar baixar os arquivos do projeto.
+ACESSO;A senha nova não é aceita pelo sistema de vendas.
+ACESSO;Estou sem acesso ao CRM desde a migração de contas.
+ACESSO;O sistema diz que meu login já está em uso em outra máquina.
+ACESSO;Não consigo validar meu usuário no primeiro acesso.
+ACESSO;Preciso que o administrador libere minhas permissões.
+ACESSO;Minhas credenciais de acesso pararam de funcionar.
+ACESSO;Aparece senha incorreta mesmo depois de redefinir.
+ACESSO;O acesso ao painel administrativo foi negado para o meu perfil.
+ACESSO;Minha conta pede autenticação extra que eu não configurei.
+ACESSO;O sistema não me deixa logar com o e-mail cadastrado.
+ACESSO;Fui bloqueado no portal do cliente por tentativas inválidas.
+ACESSO;Preciso de uma nova senha para acessar a intranet.
+ACESSO;O autenticador foi perdido junto com o celular antigo.
+ACESSO;Não tenho autorização para abrir a planilha da equipe.
+DESEMPENHO;O sistema está muito lento para abrir as telas.
+DESEMPENHO;O computador demora muito para ligar e abrir os programas.
+DESEMPENHO;A página leva quase um minuto para carregar.
+DESEMPENHO;O aplicativo trava sempre que abro a lista de clientes.
+DESEMPENHO;O relatório demora horas para ser processado.
+DESEMPENHO;O programa congela e preciso fechar à força.
+DESEMPENHO;O notebook está lento e o processador fica sempre no máximo.
+DESEMPENHO;A memória RAM fica cheia e tudo trava.
+DESEMPENHO;O sistema demora demais para salvar os pedidos.
+DESEMPENHO;A busca de produtos está muito demorada.
+DESEMPENHO;O tempo de resposta do servidor aumentou muito.
+DESEMPENHO;O site fica pesado e lento no horário de pico.
+DESEMPENHO;O aplicativo consome muita bateria e fica travando.
+DESEMPENHO;As telas demoram para responder quando clico nos botões.
+DESEMPENHO;O sistema fica lento depois de algumas horas de uso.
+DESEMPENHO;A planilha grande trava o computador inteiro.
+DESEMPENHO;A consulta ao banco de dados está demorando muito.
+DESEMPENHO;O ERP está extremamente lento desde a atualização.
+DESEMPENHO;O carregamento das imagens está muito demorado.
+DESEMPENHO;O programa fica sem responder por vários minutos.
+DESEMPENHO;O uso de disco fica em cem por cento e a máquina trava.
+DESEMPENHO;Tudo está muito lento, impossível trabalhar assim.
+DESEMPENHO;O sistema de vendas trava no fechamento do caixa.
+DESEMPENHO;A geração de notas fiscais está muito demorada.
+DESEMPENHO;O computador esquenta e fica lento com poucos programas abertos.
+DESEMPENHO;A exportação do relatório leva uma eternidade.
+DESEMPENHO;O navegador fica travando ao abrir o portal.
+DESEMPENHO;A aplicação apresenta lentidão em todas as telas.
+DESEMPENHO;O painel demora para atualizar os gráficos.
+DESEMPENHO;Abrir um simples arquivo leva vários minutos.
+DESEMPENHO;O sistema congela quando muitos usuários acessam ao mesmo tempo.
+DESEMPENHO;O processamento dos pedidos está atrasado por lentidão.
+DESEMPENHO;O aplicativo móvel está pesado e demora para abrir.
+DESEMPENHO;A máquina virtual está muito lenta.
+DESEMPENHO;O sistema fica carregando sem parar.
+DESEMPENHO;As consultas que eram rápidas agora demoram muito.
+DESEMPENHO;O computador trava ao abrir o sistema financeiro.
+DESEMPENHO;O tempo de carregamento da intranet piorou bastante.
+DESEMPENHO;O servidor está sobrecarregado e responde devagar.
+DESEMPENHO;A tela fica congelada por alguns segundos a cada clique.
+DESEMPENHO;O programa usa muita CPU mesmo parado.
+DESEMPENHO;A lentidão está atrapalhando o atendimento aos clientes.
+DESEMPENHO;O sistema demora para gerar o boleto.
+DESEMPENHO;A rotina de fechamento mensal está muito lenta.
+DESEMPENHO;O editor de texto trava com documentos grandes.
+DESEMPENHO;O sistema leva muito tempo para fazer login por causa da lentidão.
+DESEMPENHO;O site da loja está demorando muito para carregar os produtos.
+DESEMPENHO;A plataforma de ensino trava durante as aulas gravadas.
+DESEMPENHO;O backup deixa todo o sistema lento.
+DESEMPENHO;A impressão demora muito para sair por causa do processamento.
+DESEMPENHO;O programa fica pesado depois da última versão.
+DESEMPENHO;A ferramenta de chamados está lenta para abrir os tickets.
+DESEMPENHO;O sistema está travando o tempo todo.
+DESEMPENHO;O computador demora para responder ao mouse e ao teclado.
+DESEMPENHO;Ao filtrar a tabela tudo congela.
+DESEMPENHO;O sistema apresenta muita demora para processar os dados.
+DESEMPENHO;O desempenho da aplicação caiu muito nesta semana.
+DESEMPENHO;A página de relatórios fica carregando indefinidamente.
+DESEMPENHO;O aplicativo fecha sozinho por falta de memória.
+DESEMPENHO;O CRM está lento para abrir o cadastro dos clientes.
+DESEMPENHO;O sistema trava ao importar arquivos grandes.
+DESEMPENHO;A lentidão começa sempre depois do almoço.
+DESEMPENHO;O sistema está pesado e o ventilador do computador não para.
+DESEMPENHO;A tela de pedidos demora uns vinte segundos para abrir.
+DESEMPENHO;O painel administrativo está muito lento para carregar.
+DESEMPENHO;O sistema de RH congela ao gerar a folha de pagamento.
+DESEMPENHO;O computador fica travado após abrir o e-mail.
+DESEMPENHO;A busca no sistema retorna os resultados muito devagar.
+DESEMPENHO;O sistema está lento e trava ao rolar a página.
+DESEMPENHO;A aplicação demora para processar cada requisição.
+DESEMPENHO;O programa está consumindo toda a memória do servidor.
+DESEMPENHO;A sincronização dos dados está muito lenta.
+DESEMPENHO;Os gráficos demoram para renderizar no painel.
+DESEMPENHO;O sistema não aguenta a carga e fica muito lento.
+DESEMPENHO;A abertura do sistema demora cinco minutos.
+DESEMPENHO;O computador novo já está lento e travando.
+DESEMPENHO;A interface trava quando abro várias abas.
+DESEMPENHO;O processamento do lote de pedidos nunca termina.
+DESEMPENHO;O relatório de vendas trava a aplicação.
+DESEMPENHO;O sistema responde com muita demora aos comandos.
+CONEXAO;Estou sem internet desde cedo.
+CONEXAO;O Wi-Fi desconecta sozinho a todo momento.
+CONEXAO;A VPN não conecta de casa.
+CONEXAO;O computador não encontra a rede sem fio.
+CONEXAO;A internet do escritório caiu.
+CONEXAO;O cabo de rede está conectado mas aparece sem rede.
+CONEXAO;A conexão fica oscilando e cai durante as reuniões.
+CONEXAO;Recebo erro de tempo esgotado ao conectar no servidor.
+CONEXAO;O servidor não responde ao ping.
+CONEXAO;Não consigo conectar na rede da empresa.
+CONEXAO;A rede está instável e as páginas não abrem.
+CONEXAO;O roteador fica piscando e a internet não funciona.
+CONEXAO;A conexão com o banco de dados é recusada.
+CONEXAO;O sinal do wifi é muito fraco no segundo andar.
+CONEXAO;Aparece não foi possível conectar ao servidor.
+CONEXAO;A VPN conecta e desconecta várias vezes por hora.
+CONEXAO;O computador mostra conectado sem acesso à internet.
+CONEXAO;Perco a conexão sempre que a chamada de vídeo começa.
+CONEXAO;O DNS não resolve os endereços dos sites.
+CONEXAO;A impressora de rede não é encontrada.
+CONEXAO;A rede caiu no andar inteiro.
+CONEXAO;O notebook não conecta no Wi-Fi depois da atualização.
+CONEXAO;O switch do setor parece estar desligado e ninguém tem rede.
+CONEXAO;Erro de conexão recusada ao abrir o sistema.
+CONEXAO;O servidor está inacessível pela rede.
+CONEXAO;A internet cai toda vez que chove.
+CONEXAO;Há perda de pacotes na rede e as ligações cortam.
+CONEXAO;O túnel da VPN não fecha a conexão.
+CONEXAO;O celular conecta no wifi mas o computador não.
+CONEXAO;O sistema mostra falha de comunicação com o servidor.
+CONEXAO;O ponto de rede da minha mesa não funciona.
+CONEXAO;O modem perdeu o sinal da operadora.
+CONEXAO;A conexão está intermitente desde ontem.
+CONEXAO;Não consigo navegar, a internet não carrega nenhum site.
+CONEXAO;O firewall está bloqueando a conexão com o servidor externo.
+CONEXAO;O cabo de rede foi rompido na reforma.
+CONEXAO;A rede sem fio pede senha e depois não conecta.
+CONEXAO;O servidor de arquivos ficou fora da rede.
+CONEXAO;A conexão remota com a área de trabalho falha.
+CONEXAO;O endereço IP entra em conflito e perco a rede.
+CONEXAO;A internet está fora do ar na filial.
+CONEXAO;O ping para o gateway dá tempo esgotado.
+CONEXAO;A conexão SSH com o servidor cai a cada minuto.
+CONEXAO;Ficamos sem rede após a queda de energia.
+CONEXAO;A rede cabeada está desconectada no notebook.
+CONEXAO;O sistema exibe sem conexão com a internet.
+CONEXAO;A conexão com o servidor de e-mail falha.
+CONEXAO;O wifi da sala de reunião não funciona.
+CONEXAO;A conexão 4G do roteador está oscilando.
+CONEXAO;Não consigo conectar ao servidor, a conexão expira.
+CONEXAO;O adaptador de rede não é reconhecido pelo computador.
+CONEXAO;O link de internet principal caiu e o backup não assumiu.
+CONEXAO;A videochamada trava por falta de conexão.
+CONEXAO;Os pacotes estão sendo perdidos entre as filiais.
+CONEXAO;O servidor não é encontrado na rede local.
+CONEXAO;O Wi-Fi conecta mas não navega.
+CONEXAO;A rede do laboratório está fora do ar.
+CONEXAO;Não há conexão entre o computador e a impressora de rede.
+CONEXAO;A conexão com a VPN foi encerrada pelo servidor.
+CONEXAO;O provedor de internet está com instabilidade.
+CONEXAO;O computador perdeu a conexão com o domínio da rede.
+CONEXAO;O sistema dá erro de rede ao enviar os dados.
+CONEXAO;A placa de rede parou de funcionar.
+CONEXAO;O sinal do roteador não chega na minha sala.
+CONEXAO;A internet está caindo de cinco em cinco minutos.
+CONEXAO;Sem acesso à internet em todos os computadores do setor.
+CONEXAO;A conexão com a nuvem foi interrompida.
+CONEXAO;O servidor recusa a conexão na porta configurada.
+CONEXAO;O notebook mostra rede não identificada.
+CONEXAO;A conexão da filial com a matriz caiu.
+CONEXAO;O wifi fica desconectando durante o dia.
+CONEXAO;Perdemos a conectividade com o servidor de aplicação.
+CONEXAO;A rede está sem sinal desde a manutenção.
+CONEXAO;O timeout de conexão acontece ao abrir o portal.
+CONEXAO;O computador não pega internet nem pelo cabo nem pelo wifi.
+CONEXAO;A VPN dá erro de handshake e não conecta.
+CONEXAO;A conexão de rede está muito instável hoje.
+CONEXAO;O roteador reinicia sozinho e derruba a internet.
+CONEXAO;A extensão de rede não funciona no auditório.
+CONEXAO;Ficamos desconectados da internet no meio da apresentação.
