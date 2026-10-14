@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>br.sd.classificador</groupId>
+        <artifactId>classificador-mensagens</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>generator</artifactId>
+    <name>generator</name>
+    <description>Container 1: gerador contínuo de mensagens (avaliações e solicitações de suporte)</description>
+
+    <properties>
+        <main.class>br.sd.classificador.generator.GeneratorApp</main.class>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>br.sd.classificador</groupId>
+            <artifactId>common</artifactId>
+            <exclusions>
+                <!-- O gerador não usa IA: não precisa do Smile no jar final. -->
+                <exclusion>
+                    <groupId>com.github.haifengl</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>generator</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
