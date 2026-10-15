@@ -8,9 +8,7 @@ suporte em um **Topic Exchange** do RabbitMQ; dois consumidores Java independent
 sua própria **IA embarcada (biblioteca Smile)**, consomem filas distintas e classificam o texto.
 Mensagens com erro são rejeitadas e vão para **Dead Letter Queues**.
 
-> Guia de demonstração (roteiro do vídeo de 5 minutos): [DEMONSTRACAO.md](DEMONSTRACAO.md)
 > Capturas de tela para a entrega: [docs/evidencias/](docs/evidencias/README.md)
-> Comandos git por commit: [COMMITS.md](COMMITS.md)
 
 ---
 
@@ -367,18 +365,18 @@ Painel do RabbitMQ: <http://localhost:15672> – usuário `admin`, senha `admin1
 Demonstrar a DLQ (com o ambiente no ar):
 
 ```powershell
-.\scripts\send-poison.ps1                        # Windows (PowerShell): review.queue -> review.dlq
-.\scripts\send-poison.ps1 -Target support -Kind invalid-json
+.\scripts\send-poison.ps1 -Purge                 # Windows (PowerShell): review.queue -> review.dlq
+.\scripts\send-poison.ps1 -Target support -Kind invalid-json -Purge
 ```
 
 ```bash
-./scripts/send-poison.sh review poison           # Linux/macOS/Git Bash
-./scripts/send-poison.sh support missing-field
+./scripts/send-poison.sh review poison --purge   # Linux/macOS/Git Bash
+./scripts/send-poison.sh support missing-field --purge
 ```
 
-A fila é FIFO: a mensagem venenosa só chega ao consumidor depois do backlog. Para vê-la na hora,
-purgue a fila antes (painel: *Queues > review.queue > Purge Messages*). Detalhes no
-[DEMONSTRACAO.md](DEMONSTRACAO.md).
+A fila é FIFO: sem `-Purge`/`--purge`, a mensagem venenosa só chega ao consumidor depois de todo o
+backlog (~1 msg/s; o script avisa o tempo estimado). Com a opção, a fila principal é esvaziada antes
+e a mensagem aparece na DLQ em ~1 s. Detalhes no [DEMONSTRACAO.md](DEMONSTRACAO.md).
 
 ## 11. Logs
 
@@ -509,7 +507,7 @@ docker compose down -v --rmi local  # e ainda remove as imagens construídas loc
 | `Topologia ainda não disponível` | O definitions não foi carregado. Veja `docker compose logs rabbitmq` (procure `Importing`) e se a pasta `rabbitmq/` foi montada. |
 | Erro `/bin/sh^M` ou `set: Illegal option -` | Final de linha CRLF em script. O compose já remove `\r` do entrypoint; para `send-poison.sh` rode `sed -i 's/\r$//' scripts/*.sh`. |
 | `send-poison.ps1 não pode ser carregado` | Política de execução: `powershell -ExecutionPolicy Bypass -File .\scripts\send-poison.ps1`. |
-| A mensagem venenosa não aparece na DLQ | A fila é FIFO e tem backlog; purgue a fila antes ou aguarde. Veja [DEMONSTRACAO.md](DEMONSTRACAO.md). |
+| A mensagem venenosa não aparece na DLQ | A fila é FIFO e tem backlog; envie com `.\scripts\send-poison.ps1 -Purge` (ou `--purge`).|
 | Build lento na primeira vez | Download das imagens e dependências Maven; os próximos builds usam cache. |
 | Acentos estranhos no console do Windows | Use o Windows Terminal ou rode `chcp 65001` antes de `docker compose logs`. |
 | Filas muito grandes / memória | `docker compose exec rabbitmq rabbitmqctl purge_queue review.queue` ou `docker compose down -v`. |
