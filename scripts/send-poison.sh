@@ -2,12 +2,14 @@
 # Publica UMA mensagem com erro no messages.exchange usando a API HTTP de gerenciamento
 # do RabbitMQ (POST /api/exchanges/%2F/messages.exchange/publish), para demonstrar a DLQ.
 #
-# Uso:  ./scripts/send-poison.sh [review|support] [poison|invalid-json|missing-field]
+# Uso:  ./scripts/send-poison.sh [review|support] [poison|invalid-json|missing-field] [--purge]
 #   alvo  : review  -> routing key review.product  (Consumidor 1, DLQ review.dlq)   [padrão]
 #           support -> routing key support.request (Consumidor 2, DLQ support.dlq)
 #   tipo  : poison        -> JSON válido com content "__POISON__"                  [padrão]
 #           invalid-json  -> corpo que não é JSON
 #           missing-field -> JSON sem o campo obrigatório "content"
+#   --purge : esvazia a fila principal antes, para a venenosa ser a próxima consumida.
+#             A fila é FIFO: sem isso, ela espera todo o backlog (~1 msg/s).
 #
 # Variáveis opcionais: RABBITMQ_USER, RABBITMQ_PASS (lidas também do .env), RABBITMQ_MANAGEMENT_URL.
 set -euo pipefail
@@ -29,10 +31,11 @@ BASE_URL="${RABBITMQ_MANAGEMENT_URL:-http://localhost:${MGMT_PORT:-15672}}"
 
 TARGET="${1:-review}"
 KIND="${2:-poison}"
+PURGE="${3:-}"
 
 case "$TARGET" in
-    review)  ROUTING_KEY="review.product";  TYPE="review";  DLQ="review.dlq" ;;
-    support) ROUTING_KEY="support.request"; TYPE="support"; DLQ="support.dlq" ;;
+    review)  ROUTING_KEY="review.product";  TYPE="review";  QUEUE="review.queue";  DLQ="review.dlq" ;;
+    support) ROUTING_KEY="support.request"; TYPE="support"; QUEUE="support.queue"; DLQ="support.dlq" ;;
     *) echo "Alvo inválido: '$TARGET' (use review ou support)" >&2; exit 1 ;;
 esac
 
@@ -61,6 +64,17 @@ esac
 ESCAPED_BODY="$(printf '%s' "$BODY" | sed -e 's/\\/\\\\/g' -e 's/"/\\"/g')"
 REQUEST="{\"properties\":{\"delivery_mode\":2,\"content_type\":\"application/json\",\"message_id\":\"$ID\",\"app_id\":\"send-poison\"},\"routing_key\":\"$ROUTING_KEY\",\"payload\":\"$ESCAPED_BODY\",\"payload_encoding\":\"string\"}"
 
+BACKLOG=0
+if [ "$PURGE" = "--purge" ]; then
+    curl -sS -u "$USER_NAME:$USER_PASS" -X DELETE "$BASE_URL/api/queues/%2F/$QUEUE/contents" >/dev/null
+    echo "Fila '$QUEUE' purgada: a mensagem venenosa será a próxima a ser consumida."
+else
+    # As estatísticas da API são atualizadas a cada ~5 s; por isso só são consultadas sem --purge.
+    BACKLOG="$(curl -sS -u "$USER_NAME:$USER_PASS" "$BASE_URL/api/queues/%2F/$QUEUE" \
+        | grep -o '"messages_ready":[0-9]*' | head -n 1 | cut -d ':' -f 2)"
+    BACKLOG="${BACKLOG:-0}"
+fi
+
 echo "Publicando mensagem com erro ($KIND) em messages.exchange com routing key '$ROUTING_KEY'..."
 echo "  id   : $ID"
 echo "  corpo: $BODY"
@@ -72,6 +86,10 @@ echo "Resposta da API: $RESPONSE"
 if printf '%s' "$RESPONSE" | grep -q '"routed":true'; then
     echo "OK! A mensagem foi roteada. O consumidor vai rejeitá-la (basicNack requeue=false)"
     echo "e ela aparecerá na fila '$DLQ' (Queues > $DLQ > Get messages, veja o header x-death)."
+    if [ "$BACKLOG" -gt 20 ]; then
+        echo "AVISO: há $BACKLOG mensagens na frente em '$QUEUE' (fila FIFO, ~1 msg/s): a venenosa só chega"
+        echo "à DLQ em ~$(( (BACKLOG + 59) / 60 )) min. Para ver na hora: ./scripts/send-poison.sh $TARGET $KIND --purge"
+    fi
 else
     echo "A mensagem NÃO foi roteada. Verifique se o ambiente está no ar e as credenciais." >&2
     exit 1
